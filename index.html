@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/font-icon/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Tea House</title>
+</head>
+<body>
+    <div id="main">
+        <!-- HEADER -->
+        <header id="header">
+            <!-- HEADER NOTIFY -->
+            <div class="header__notify">
+                <div class="grid wide sm-gutter">
+                    <div class="row header__notify--center">
+                        <div class="col l-6">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <span>Hotline:</span>
+                            <a href="" class="header__notify-phone">0329479***</a>
+                        </div>
+
+                        <div class="col l-6">
+                            <ul class="header__notify-right">
+                                <li class="header__notify-right-items">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                    <span class="header__notify-right-items-text">Tìm kiếm</span>
+                                </li>
+    
+                                <li class="header__notify-right-items">
+                                    <i class="fa-solid fa-user"></i>
+                                    <span class="header__notify-right-items-text">Tài khoản</span>
+                                    <ul class="header__menu-login">
+                                        <li class="header__menu-login-items">
+                                            <a class="header__menu-login-link" href="">Đăng kí</a>
+                                        </li>
+                                        <li class="header__menu-login-items">
+                                            <a class="header__menu-login-link" href="">Đăng nhập</a>
+                                        </li>
+                                    </ul>
+                                </li>
+    
+                                <li class="header__notify-right-items">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                    <span class="header__notify-right-items-text">Giỏ hàng</span>
+                                    <div class="header__cart-no-cart">
+                                        <img class="header__cart-img" src="./assets/img/empty-cart.webp" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__nav">
+                <div class="grid wide">
+                    <div class="header__nav--center">
+                        <div>
+                            <ul class="header__nav-list">
+                                <li class="header__nav-list-items">
+                                    <a>Trang Chủ</a>
+                                </li>
+
+                                <li class="header__nav-list-items">
+                                    <a>Giới Thiệu</a>
+                                </li>
+
+                                <li class="header__nav-list-items header__nav-list-items--center">
+                                    <a>
+                                        Sản Phẩm
+                                    </a>
+                                    <i class="fa-solid fa-caret-down"></i>
+                                    <ul class="header__nav-list-menu">
+                                        <li class="header__nav-list-menu-items">
+                                            <a href="" class="header__nav-list-menu-link">
+                                                Cà phê
+                                            </a>
+                                        </li>
+                                        <li class="header__nav-list-menu-items">
+                                            <a href="" class="header__nav-list-menu-link">
+                                                Bánh ngọt
+                                            </a>
+                                        </li>
+                                        <li class="header__nav-list-menu-items">
+                                            <a href="" class="header__nav-list-menu-link">
+                                                Smoothies
+                                            </a>
+                                        </li>
+                                        <li class="header__nav-list-menu-items">
+                                            <a href="" class="header__nav-list-menu-link">
+                                                Trà hoa quả
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <img src="./assets/img/logo.webp" alt="">
+                        </div>
+
+                        <div>
+                            <ul class="header__nav-list">
+                                <li class="header__nav-list-items">
+                                    <a>Tin Tức</a>
+                                </li>
+
+                                <li class="header__nav-list-items">
+                                    <a>Khuyến Mại</a>
+                                </li>
+
+                                <li class="header__nav-list-items">
+                                    <a>Thực đơn</a>
+                                </li>
+
+                                <li class="header__nav-list-items">
+                                    <a>Liên Hệ</a>
+                                </li>                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="slider">
+            <img class="slider__img" src="./assets/img/slider_1.webp" alt="">
+        </div>
+
+        <div id="container">
+            <div class="container__product">
+                <div class="grid wide">
+                    <div class="content__header">
+                        <div class="content__header-img">
+                            <img src="./assets/img/title_base.webp" alt="">
+                        </div>
+
+                        <div class="content__header-title">
+                            <span>Danh mục sản phẩm</span>
+                        </div>
+                    </div>
+                    <ul class="row content__product-list">
+                        <li class="col l-3 m-4 c-6 content__product-items">
+                            <a href="" class="content__product-link">
+                               <img src="./assets/img/product-1.webp" alt="">
+                               <span class="content__product-link-desc">Trà nóng</span> 
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 content__product-items">
+                            <a href="" class="content__product-link">
+                               <img src="./assets/img/product-2.webp" alt="">
+                               <span class="content__product-link-desc">Trà hoa quả</span> 
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 content__product-items">
+                            <a href="" class="content__product-link">
+                               <img src="./assets/img/product-3.webp" alt="">
+                               <span class="content__product-link-desc">Smoothies</span> 
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 content__product-items">
+                            <a href="" class="content__product-link">
+                               <img src="./assets/img/product-4.webp" alt="">
+                               <span class="content__product-link-desc">Bánh ngọt</span> 
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 content__product-items">
+                            <a href="" class="content__product-link">
+                               <img src="./assets/img/product-1.webp" alt="">
+                               <span class="content__product-link-desc">Danh mục 5</span> 
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 content__product-items">
+                            <a href="" class="content__product-link">
+                               <img src="./assets/img/product-2.webp" alt="">
+                               <span class="content__product-link-desc">Danh mục 6</span> 
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container__about">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-6 content__about">
+                            <div class="content__header">
+                                <div class="content__header-img content__header-img-left">
+                                    <img src="./assets/img/title_base.webp" alt="">
+                                </div>
+        
+                                <div class="content__header-title content__header-left">
+                                    <span>Tại sao chọn chúng tôi</span>
+                                </div>
+
+                                <div class="content__about-text">
+                                    "Với những nghệ nhân rang tâm huyết và đội ngũ tài năng cùng những câu chuyện trà đầy cảm hứng, ngôi nhà Tea House là không gian dành riêng cho những ai trót yêu say đắm hương vị của những lá trà tuyệt hảo."
+                                </div>
+
+                                <ul class="content__about-list">
+                                    <li class="content__about-items">
+                                        <div class="conntent__about-icon">
+                                            <img src="./assets/img/about-icon-1.webp" alt="">
+                                        </div>
+                                        <div class="content__about-icon-text">
+                                            <div class="content__about-item-head">Giá cả phải chăng</div>
+                                            <div class="content__about-item-desc">Cam kết chỉ cung cấp cà phê có nguồn gốc được kiểm soát chất lượng</div>
+                                        </div>
+                                    </li>
+
+                                    <li class="content__about-items">
+                                        <div class="conntent__about-icon">
+                                            <img src="./assets/img/about-icon-2.webp" alt="">
+                                        </div>
+                                        <div class="content__about-icon-text">
+                                            <div class="content__about-item-head">Hương vị tuyệt hảo</div>
+                                            <div class="content__about-item-desc">Những giọt trà được lựa chọn cẩn thận ngay từ lúc đang ngâm mình trong sương</div>
+                                        </div>
+                                    </li>
+
+                                    <li class="content__about-items">
+                                        <div class="conntent__about-icon">
+                                            <img src="./assets/img/about-icon-3.webp" alt="">
+                                        </div>
+                                        <div class="content__about-icon-text">
+                                            <div class="content__about-item-head">Sản phẩm tự nhiên</div>
+                                            <div class="content__about-item-desc">Cam kết chỉ cunng cấp lá trà có nguồn gốc được kiểm soát chất lượng chặt chẽ</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container__menu">
+                <div class="grid wide">
+                    <div class="content__header">
+                        <div class="content__header-img">
+                            <img src="./assets/img/title_base.webp" alt="">
+                        </div>
+    
+                        <div class="content__header-title">
+                            <span>Menu hôm nay</span>
+                        </div>
+                    </div>
+
+                    <ul class="container__menu-nav">
+                        <li class="container__menu-nav-items">
+                            <div class="container__menu-nav-link active">
+                                Trà nóng
+                            </div>
+                        </li>
+
+                        <li class="container__menu-nav-items">
+                            <div class="container__menu-nav-link active">
+                                Trà hoa quả
+                            </div>
+                        </li>
+
+                        <li class="container__menu-nav-items">
+                            <div class="container__menu-nav-link active">
+                                Smoothies
+                            </div>
+                        </li>
+
+                        <li class="container__menu-nav-items">
+                            <div class="container__menu-nav-link active">
+                                Bánh ngọt
+                            </div>
+                        </li>
+
+                    </ul>
+                    <!-- CONTAINER MENU PRODUCT -->
+                    <ul class="row container__menu-list">
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/phucbontu.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà phúc bồn tử</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/travai.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà vải</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/tracamdao.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà cam đào</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/tratao.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà táo</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/travietquat.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà việt quất</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/tradautay.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà dâu tây</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/traxoai.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà xoài</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+
+                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="./assets/img/Product/Hottea/trachanh.webp" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">Trà chanh</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>40.000đ</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="containne__time">
+                <div class="grid wide">
+                    <div class="row">
+                        <div class="col l-7 m-12 c-12 container__time-left">
+                            <div class="container__time-header">
+                                <div class="content__header-img content__header-img-left">
+                                    <img src="./assets/img/title_base_2.webp" alt="">
+                                </div>
+        
+                                <div class="content__header-title content__header-left container__time-header-text">
+                                    <span>Thời gian mở cửa</span>
+                                </div>
+                            </div>
+
+                            <p class="container__time-left-text">
+                                “Cà phê nhé" - Một lời hẹn rất riêng của người Việt. Một lời ngỏ mộc mạc để mình ngồi lại bên nhau và sẻ chia câu chuyện của riêng mình. Tea House hẹn gặp bạn chốn quen thuộc.
+                            </p>
+
+                            <ul class="container__time-left-list">
+                                <li class="container__time-left-items">T2 - T6: 8h30 - 21h30</li>
+                                <li class="container__time-left-items">T7 - CN: 8h00 - 22h00</li>
+                            </ul>
+
+                            <button class="container__time-left-btn">Đặt bàn ngay</button>
+                        </div>
+
+                        <div class="col l-5 m-12 c-12 container__time-right">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer id="footer">
+
+        </footer>
+    </div>
+</body>
+</html>
