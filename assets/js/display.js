@@ -1,22 +1,43 @@
 // Hiển thị sản phẩm
 function displayProduct(productArr) {
     let result = "";
+    let userValue = document.getElementById('userName').value;
     for(let i = 0; i < productArr.length; i++) {
-        result += `<li class="col l-3 m-4 c-6 container__menu-list-item">
-                        <a href="" class="container__menu-list-link">
-                            <div class="container__menu-list-link-img-btn">
-                                <img src="${productArr[i].getImg()}" alt="">
-                                <button class="container__menu-list-link-btn">
-                                    Thêm vào giỏ hàng
-                                </button>
-                            </div>
-                            <p class="container__menu-list-link-name">${productArr[i].getName()}</p>
-                            <p class="container__menu-list-link-price">
-                                Giá:
-                                <span>${productArr[i].getPrice()}</span>
-                            </p>
-                        </a>
-                    </li>`
+        if(userValue == "Admin") {
+            result += `<li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="${productArr[i].getImg()}" alt="">
+                                    <button class="container__menu-list-link-btn">
+                                        Thêm vào giỏ hàng
+                                    </button>
+                                </div>
+                                <p class="container__menu-list-link-name">${productArr[i].getName()}</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>${productArr[i].getPrice()}</span>
+                                </p>
+                                <div class="container__product-btn">
+                                    <button class="product-btn">Sửa</button>
+                                    <button class="product-btn">Xoá</button>
+                                </div>
+                            </a>
+                        </li>`                                      
+        } else {
+            result += `<li class="col l-3 m-4 c-6 container__menu-list-item">
+                            <a href="" class="container__menu-list-link">
+                                <div class="container__menu-list-link-img-btn">
+                                    <img src="${productArr[i].getImg()}" alt="">
+                                </div>
+                                <p class="container__menu-list-link-name">${productArr[i].getName()}</p>
+                                <p class="container__menu-list-link-price">
+                                    Giá:
+                                    <span>${productArr[i].getPrice()}</span>
+                                </p>
+                            </a>
+                        </li>`            
+        }
+                    
     }
     document.getElementById('menu').innerHTML = result;
 }

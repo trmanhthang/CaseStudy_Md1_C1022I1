@@ -34,7 +34,7 @@
     
                                 <li id="account" class="header__notify-right-items">
                                     <i class="fa-solid fa-user"></i>
-                                    <span class="header__notify-right-items-text">Tài khoản</span>
+                                    <input id="userName" class="header__notify-right-items-input" value="Tài khoản" readonly></input>
                                     <ul class="header__menu-login">
                                         <li class="header__menu-login-items">
                                             <button class="header__menu-login-link" href="">Đăng kí</button>
@@ -328,118 +328,10 @@
                                     Giá:
                                     <span>40.000đ</span>
                                 </p>
-                            </a>
-                        </li>
-
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/travai.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
+                                <div class="container__product-btn">
+                                    <button class="product-btn">Sửa</button>
+                                    <button class="product-btn">Xoá</button>
                                 </div>
-                                <p class="container__menu-list-link-name">Trà vải</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/tracamdao.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                </div>
-                                <p class="container__menu-list-link-name">Trà cam đào</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/tratao.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                </div>
-                                <p class="container__menu-list-link-name">Trà táo</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/travietquat.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                </div>
-                                <p class="container__menu-list-link-name">Trà việt quất</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/tradautay.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                </div>
-                                <p class="container__menu-list-link-name">Trà dâu tây</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/traxoai.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                </div>
-                                <p class="container__menu-list-link-name">Trà xoài</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
-                            </a>
-                        </li>
-
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/trachanh.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                </div>
-                                <p class="container__menu-list-link-name">Trà chanh</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
                             </a>
                         </li> -->
                     </ul>
@@ -622,7 +514,7 @@
                     <input id="password" type="password">
                 </div>
 
-                <div class="modal__login-btn">
+                <div class="modal__login-btn" onclick="clickLogin()">
                     <button class="login-btn">Login</button>
                 </div>
 

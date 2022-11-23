@@ -1,7 +1,7 @@
-const userName = "admin";
+const userName = "Admin";
 const userPassword = "123456789";
-let inputUserName = document.getElementById('name').value;
-let inputUserPassword = document.getElementById('password').value;
+let inputUserName = document.getElementById('name');
+let inputUserPassword = document.getElementById('password');
 let modal = document.getElementById('modal');
 
 function openLoginModal() {
@@ -12,10 +12,22 @@ function closeLoginModal() {
     modal.style.display = "none";
 }
 
+// Login Admin
 function acceptLogin() {
-    if(inputUserName == userName && inputUserPassword == userPassword) {
-        let  = ""
-        alert('Đăng Nhập Thành Công!')
-        document.getElementById('account').innerHTML = 
+    if(inputUserName.value == userName && inputUserPassword.value == userPassword) {
+        let result = ""
+        result += `<i class="fa-solid fa-user"></i>
+                   <input id="userName" class="header__notify-right-items-input" value="Tài khoản" readonly></input>`
+        document.getElementById('account').innerHTML = result;
+        document.getElementById('userName').value = userName;
+        displayHotTea();
+    } else {
+        alert('Sai tên đăng nhập hoặc mật khẩu!')
     }
+}
+
+
+function clickLogin() {
+    acceptLogin();
+    closeLoginModal();
 }
