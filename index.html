@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Tea House</title>
 </head>
-<body>
+<body onload="displayHotTea()">
     <div id="main">
         <!-- HEADER -->
         <header id="header">
@@ -32,15 +32,15 @@
                                     <span class="header__notify-right-items-text">Tìm kiếm</span>
                                 </li>
     
-                                <li class="header__notify-right-items">
+                                <li id="account" class="header__notify-right-items">
                                     <i class="fa-solid fa-user"></i>
                                     <span class="header__notify-right-items-text">Tài khoản</span>
                                     <ul class="header__menu-login">
                                         <li class="header__menu-login-items">
-                                            <a class="header__menu-login-link" href="">Đăng kí</a>
+                                            <button class="header__menu-login-link" href="">Đăng kí</button>
                                         </li>
-                                        <li class="header__menu-login-items">
-                                            <a class="header__menu-login-link" href="">Đăng nhập</a>
+                                        <li class="header__menu-login-items" onclick="openLoginModal()">
+                                            <button class="header__menu-login-link" href="">Đăng nhập</button>
                                         </li>
                                     </ul>
                                 </li>
@@ -48,9 +48,37 @@
                                 <li class="header__notify-right-items">
                                     <i class="fa-solid fa-bag-shopping"></i>
                                     <span class="header__notify-right-items-text">Giỏ hàng</span>
+
+                                    <!-- HAS CART -->
+                                    <div class="header__cart-list">     
+                                        <h4 class="header__cart-list-heading">Sản Phẩm Đã Chọn</h4>
+                                        <ul class="header__cart-list-item">
+                                            <li class="header__cart-item">
+                                                <img src="./assets/img/Product/Tea/phucbontu.webp" alt="" class="header__cart-item-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Trà Phúc Bồn Tử</h5>
+                                                        <div class="header__cart-item-wrap">
+                                                            <span class="header__cart-item-price">40.000đ</span>
+                                                            <span class="header__cart-item-multiply">x</span>   
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-description">
+                                                            Phân loại hàng: Trà nóng
+                                                        </span>
+                                                        <span class="header__cart-item-remove">Xoá</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- NO CART
                                     <div class="header__cart-no-cart">
                                         <img class="header__cart-img" src="./assets/img/empty-cart.webp" alt="">
-                                    </div>
+                                    </div> -->
                                 </li>
                             </ul>
                         </div>
@@ -78,22 +106,22 @@
                                     <i class="fa-solid fa-caret-down"></i>
                                     <ul class="header__nav-list-menu">
                                         <li class="header__nav-list-menu-items">
-                                            <a href="" class="header__nav-list-menu-link">
-                                                Cà phê
+                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displayHotTea()">
+                                                Trà nóng
                                             </a>
                                         </li>
                                         <li class="header__nav-list-menu-items">
-                                            <a href="" class="header__nav-list-menu-link">
+                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displayCake()">
                                                 Bánh ngọt
                                             </a>
                                         </li>
                                         <li class="header__nav-list-menu-items">
-                                            <a href="" class="header__nav-list-menu-link">
+                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displaySmoothies()">
                                                 Smoothies
                                             </a>
                                         </li>
                                         <li class="header__nav-list-menu-items">
-                                            <a href="" class="header__nav-list-menu-link">
+                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displayFruitTea()">
                                                 Trà hoa quả
                                             </a>
                                         </li>
@@ -148,28 +176,28 @@
                     </div>
                     <ul class="row content__product-list">
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="" class="content__product-link">
+                            <a href="#menu" class="content__product-link" onclick="displayHotTea()">
                                <img src="./assets/img/product-1.webp" alt="">
                                <span class="content__product-link-desc">Trà nóng</span> 
                             </a>
                         </li>
 
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="" class="content__product-link">
+                            <a href="#menu" class="content__product-link" onclick="displayFruitTea()">
                                <img src="./assets/img/product-2.webp" alt="">
                                <span class="content__product-link-desc">Trà hoa quả</span> 
                             </a>
                         </li>
 
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="" class="content__product-link">
+                            <a href="#menu" class="content__product-link" onclick="displaySmoothies()">
                                <img src="./assets/img/product-3.webp" alt="">
                                <span class="content__product-link-desc">Smoothies</span> 
                             </a>
                         </li>
 
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="" class="content__product-link">
+                            <a href="#menu" class="content__product-link" onclick="displayCake()">
                                <img src="./assets/img/product-4.webp" alt="">
                                <span class="content__product-link-desc">Bánh ngọt</span> 
                             </a>
@@ -261,36 +289,36 @@
 
                     <ul class="container__menu-nav">
                         <li class="container__menu-nav-items">
-                            <div class="container__menu-nav-link active">
+                            <div id="hotTea" class="container__menu-nav-link active" onclick="displayHotTea()">
                                 Trà nóng
                             </div>
                         </li>
 
                         <li class="container__menu-nav-items">
-                            <div class="container__menu-nav-link active">
+                            <div id="fruitTea" class="container__menu-nav-link" onclick="displayFruitTea()">
                                 Trà hoa quả
                             </div>
                         </li>
 
                         <li class="container__menu-nav-items">
-                            <div class="container__menu-nav-link active">
+                            <div id="smoothies" class="container__menu-nav-link" onclick="displaySmoothies()">
                                 Smoothies
                             </div>
                         </li>
 
                         <li class="container__menu-nav-items">
-                            <div class="container__menu-nav-link active">
+                            <div id="cake" class="container__menu-nav-link" onclick="displayCake()">
                                 Bánh ngọt
                             </div>
                         </li>
 
                     </ul>
                     <!-- CONTAINER MENU PRODUCT -->
-                    <ul class="row container__menu-list">
-                        <li class="col l-3 m-4 c-6 container__menu-list-item">
+                    <ul id="menu" class="row container__menu-list">
+                        <!-- <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/phucbontu.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/phucbontu.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -306,7 +334,7 @@
                         <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/travai.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/travai.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -322,7 +350,7 @@
                         <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/tracamdao.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/tracamdao.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -338,7 +366,7 @@
                         <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/tratao.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/tratao.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -354,7 +382,7 @@
                         <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/travietquat.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/travietquat.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -370,7 +398,7 @@
                         <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/tradautay.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/tradautay.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -386,7 +414,7 @@
                         <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/traxoai.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/traxoai.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -402,7 +430,7 @@
                         <li class="col l-3 m-4 c-6 container__menu-list-item">
                             <a href="" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Hottea/trachanh.webp" alt="">
+                                    <img src="./assets/img/Product/Tea/trachanh.webp" alt="">
                                     <button class="container__menu-list-link-btn">
                                         Thêm vào giỏ hàng
                                     </button>
@@ -413,7 +441,7 @@
                                     <span>40.000đ</span>
                                 </p>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
@@ -574,5 +602,39 @@
             </div>
         </footer>
     </div>
+
+    <!-- MODAL LOGIN -->
+    <div id="modal">
+        <div class="modal__background" onclick="closeLoginModal()"></div>
+        <div class="modal__login">
+            <header class="modal__login-header">
+                <span>Đăng Nhập</span>
+            </header>
+
+            <div class="modal__login-body">
+                <div class="modal__login-body-input">
+                    <label for="name">Tên Đăng Nhập:</label>
+                    <input id="name" type="text">
+                </div>
+
+                <div class="modal__login-body-input">
+                    <label for="password">Mật Khẩu:</label>
+                    <input id="password" type="password">
+                </div>
+
+                <div class="modal__login-btn">
+                    <button class="login-btn">Login</button>
+                </div>
+
+                <button class="modal__login-close" onclick="closeLoginModal()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
+
+<script src="./assets/js/product.js"></script>
+<script src="./assets/js/display.js"></script>
+<script src="./assets/js/login.js"></script>
 </html>
