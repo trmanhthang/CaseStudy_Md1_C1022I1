@@ -614,6 +614,7 @@ span.content__product-link-desc {
     margin-top: 50px;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .container__menu-list-link:hover .container__menu-list-link-btn {
