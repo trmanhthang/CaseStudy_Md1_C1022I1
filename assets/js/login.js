@@ -1,5 +1,5 @@
 const userName = "Admin";
-const userPassword = "123456789";
+const userPassword = "1234";
 let inputUserName = document.getElementById('name');
 let inputUserPassword = document.getElementById('password');
 let modal = document.getElementById('modal');
@@ -22,10 +22,9 @@ function acceptLogin() {
         document.getElementById('userName').value = userName;
         displayHotTea();
     } else {
-        alert('Sai tên đăng nhập hoặc mật khẩu!')
+        alert('Sai tên đăng nhập hoặc mật khẩu!');
     }
 }
-
 
 function clickLogin() {
     acceptLogin();

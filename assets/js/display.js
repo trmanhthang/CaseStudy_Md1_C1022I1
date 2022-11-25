@@ -2,44 +2,49 @@
 function displayProduct(productArr) {
     let result = "";
     let userValue = document.getElementById('userName').value;
-    for(let i = 0; i < productArr.length; i++) {
-        if(userValue == "Admin") {
+    if(userValue == "Admin") {
+        for(let i = 0; i < productArr.length; i++) {
             result += `<li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
+                            <a href="#" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
                                     <img src="${productArr[i].getImg()}" alt="">
-                                    <button class="container__menu-list-link-btn">
+                                    <button class="container__menu-list-link-btn" onclick="buyProduct(${i}, '${productArr[i].getCategory()}')">
                                         Thêm vào giỏ hàng
                                     </button>
                                 </div>
                                 <p class="container__menu-list-link-name">${productArr[i].getName()}</p>
                                 <p class="container__menu-list-link-price">
                                     Giá:
-                                    <span>${productArr[i].getPrice()}</span>
+                                    <span>${productArr[i].getPrice()}đ</span>
                                 </p>
                                 <div class="container__product-btn">
-                                    <button class="product-btn">Sửa</button>
-                                    <button class="product-btn">Xoá</button>
+                                    <button class="product-btn" onclick="editProduct(${i}, '${productArr[i].getCategory()}')">Sửa</button>
+                                    <button type="button" class="product-btn" onclick="deleteProduct(${i}, '${productArr[i].getCategory()}')">Xoá</button>
                                 </div>
                             </a>
-                        </li>`                                      
-        } else {
+                        </li>`
+            document.getElementById('addBtn').style.display = "flex";                                      
+        } 
+    } else {
+        for(let i = 0; i < productArr.length; i++) {
             result += `<li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
+                            <a href="#" class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
                                     <img src="${productArr[i].getImg()}" alt="">
                                 </div>
                                 <p class="container__menu-list-link-name">${productArr[i].getName()}</p>
                                 <p class="container__menu-list-link-price">
                                     Giá:
-                                    <span>${productArr[i].getPrice()}</span>
+                                    <span>${productArr[i].getPrice()}đ</span>
                                 </p>
                             </a>
-                        </li>`            
+                        </li>`
+            document.getElementById('addBtn').style.display = "none";            
         }
                     
     }
     document.getElementById('menu').innerHTML = result;
+    event.preventDefault();
 }
 
 let hot_tea = document.getElementById('hotTea');

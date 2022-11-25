@@ -27,14 +27,17 @@
 
                         <div class="col l-6">
                             <ul class="header__notify-right">
-                                <li class="header__notify-right-items">
-                                    <i class="fa-solid fa-magnifying-glass"></i>
-                                    <span class="header__notify-right-items-text">Tìm kiếm</span>
+                                <li class="header__notify-right-items" onclick="showInputSearch()">
+                                    <div id="header-wrap" class="header__notify-wrap">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                        <span class="header__notify-right-items-text">Tìm kiếm</span>
+                                    </div>
+                                    <input id="input-search" type="search" class="header__notify-right-input-search">
                                 </li>
     
                                 <li id="account" class="header__notify-right-items">
                                     <i class="fa-solid fa-user"></i>
-                                    <input id="userName" class="header__notify-right-items-input" value="Tài khoản" readonly></input>
+                                    <input id="userName" class="header__notify-right-items-input" value="Tài khoản"></input>
                                     <ul class="header__menu-login">
                                         <li class="header__menu-login-items">
                                             <button class="header__menu-login-link" href="">Đăng kí</button>
@@ -45,40 +48,31 @@
                                     </ul>
                                 </li>
     
-                                <li class="header__notify-right-items">
+                                <li id="cart" class="header__notify-right-items header__notify-cart" onmousemove="showCart()">
+                                    <div id="cart-price" class="header__notify-cart-price">
+                                    </div>
                                     <i class="fa-solid fa-bag-shopping"></i>
                                     <span class="header__notify-right-items-text">Giỏ hàng</span>
 
                                     <!-- HAS CART -->
-                                    <div class="header__cart-list">     
+                                    <div id="has-cart" class="header__cart-list">     
                                         <h4 class="header__cart-list-heading">Sản Phẩm Đã Chọn</h4>
-                                        <ul class="header__cart-list-item">
-                                            <li class="header__cart-item">
-                                                <img src="./assets/img/Product/Tea/phucbontu.webp" alt="" class="header__cart-item-img">
-                                                <div class="header__cart-item-info">
-                                                    <div class="header__cart-item-head">
-                                                        <h5 class="header__cart-item-name">Trà Phúc Bồn Tử</h5>
-                                                        <div class="header__cart-item-wrap">
-                                                            <span class="header__cart-item-price">40.000đ</span>
-                                                            <span class="header__cart-item-multiply">x</span>   
-                                                            <span class="header__cart-item-quantity">2</span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="header__cart-item-body">
-                                                        <span class="header__cart-item-description">
-                                                            Phân loại hàng: Trà nóng
-                                                        </span>
-                                                        <span class="header__cart-item-remove">Xoá</span>
-                                                    </div>
-                                                </div>
-                                            </li>
+                                        <ul id="has-product" class="header__cart-list-item">
                                         </ul>
+
+                                        <div class="header__cart-list-total">
+                                            <span class="header__cart-list-total-text">
+                                                Tổng tiền: 
+                                                <span id="total" class="header__cart-list-total-money"></span>
+                                                <span class="header__cart-list-total-dong">đ</span>
+                                            </span>
+                                        </div>
                                     </div>
 
-                                    <!-- NO CART
-                                    <div class="header__cart-no-cart">
+                                    <!-- NO CART -->
+                                    <div id="no-cart" class="header__cart-no-cart">
                                         <img class="header__cart-img" src="./assets/img/empty-cart.webp" alt="">
-                                    </div> -->
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -106,22 +100,22 @@
                                     <i class="fa-solid fa-caret-down"></i>
                                     <ul class="header__nav-list-menu">
                                         <li class="header__nav-list-menu-items">
-                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displayHotTea()">
+                                            <a href="#container-menu" class="header__nav-list-menu-link" onclick="displayHotTea()">
                                                 Trà nóng
                                             </a>
                                         </li>
                                         <li class="header__nav-list-menu-items">
-                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displayCake()">
+                                            <a href="#container-menu" class="header__nav-list-menu-link" onclick="displayCake()">
                                                 Bánh ngọt
                                             </a>
                                         </li>
                                         <li class="header__nav-list-menu-items">
-                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displaySmoothies()">
+                                            <a href="#container-menu" class="header__nav-list-menu-link" onclick="displaySmoothies()">
                                                 Smoothies
                                             </a>
                                         </li>
                                         <li class="header__nav-list-menu-items">
-                                            <a href="#menu" class="header__nav-list-menu-link" onclick="displayFruitTea()">
+                                            <a href="#container-menu" class="header__nav-list-menu-link" onclick="displayFruitTea()">
                                                 Trà hoa quả
                                             </a>
                                         </li>
@@ -176,28 +170,28 @@
                     </div>
                     <ul class="row content__product-list">
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="#menu" class="content__product-link" onclick="displayHotTea()">
+                            <a href="#container-menu" class="content__product-link" onclick="displayHotTea()">
                                <img src="./assets/img/product-1.webp" alt="">
                                <span class="content__product-link-desc">Trà nóng</span> 
                             </a>
                         </li>
 
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="#menu" class="content__product-link" onclick="displayFruitTea()">
+                            <a href="#container-menu" class="content__product-link" onclick="displayFruitTea()">
                                <img src="./assets/img/product-2.webp" alt="">
                                <span class="content__product-link-desc">Trà hoa quả</span> 
                             </a>
                         </li>
 
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="#menu" class="content__product-link" onclick="displaySmoothies()">
+                            <a href="#container-menu" class="content__product-link" onclick="displaySmoothies()">
                                <img src="./assets/img/product-3.webp" alt="">
                                <span class="content__product-link-desc">Smoothies</span> 
                             </a>
                         </li>
 
                         <li class="col l-3 m-4 c-6 content__product-items">
-                            <a href="#menu" class="content__product-link" onclick="displayCake()">
+                            <a href="#container-menu" class="content__product-link" onclick="displayCake()">
                                <img src="./assets/img/product-4.webp" alt="">
                                <span class="content__product-link-desc">Bánh ngọt</span> 
                             </a>
@@ -275,7 +269,7 @@
                 </div>
             </div>
 
-            <div class="container__menu">
+            <div id="container-menu" class="container__menu">
                 <div class="grid wide">
                     <div class="content__header">
                         <div class="content__header-img">
@@ -315,26 +309,10 @@
                     </ul>
                     <!-- CONTAINER MENU PRODUCT -->
                     <ul id="menu" class="row container__menu-list">
-                        <!-- <li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="" class="container__menu-list-link">
-                                <div class="container__menu-list-link-img-btn">
-                                    <img src="./assets/img/Product/Tea/phucbontu.webp" alt="">
-                                    <button class="container__menu-list-link-btn">
-                                        Thêm vào giỏ hàng
-                                    </button>
-                                </div>
-                                <p class="container__menu-list-link-name">Trà phúc bồn tử</p>
-                                <p class="container__menu-list-link-price">
-                                    Giá:
-                                    <span>40.000đ</span>
-                                </p>
-                                <div class="container__product-btn">
-                                    <button class="product-btn">Sửa</button>
-                                    <button class="product-btn">Xoá</button>
-                                </div>
-                            </a>
-                        </li> -->
                     </ul>
+                    <div id="addBtn" class="row container__menu-add">
+                        <button class="container__menu-add-btn" onclick="openAddModal()">Thêm sản phẩm</button>
+                    </div>
                 </div>
             </div>
 
@@ -524,9 +502,90 @@
             </div>
         </div>
     </div>
+
+    <!-- MODAL ADD -->
+    <div id="modal-add">
+        <div class="modal-add__background"></div>
+        <div class="modal-add__container">
+            <header class="modal-add-header">
+                <span>Thêm sản phẩm</span>
+            </header>
+            <div class="modal-add__body">
+                <div class="modal-add__input">
+                    <label for="">Phân loại:</label>
+                    <select name="" id="category">
+                        <option value="Trà nóng">Trà nóng</option>
+                        <option value="Trà hoa quả">Trà hoa quả</option>
+                        <option value="Smoothies">Smoothies</option>
+                        <option value="Bánh">Bánh</option>
+                    </select>
+                </div>
+
+                <div class="modal-add__input">
+                    <label for="">Tên sản phẩm:</label>
+                    <input id="add-name" type="text">
+                </div>
+
+                <div class="modal-add__input">
+                    <label for="">Ảnh minh hoạ(url):</label>
+                    <input id="add-img" type="text">
+                </div>
+
+                <div class="modal-add__input">
+                    <label for="">Giá tiền(VNĐ):</label>
+                    <input id="add-price" type="number">
+                </div> 
+            </div>
+            <div class="modal__add-btn" onclick="">
+                <button class="add-btn" onclick="addProduct()">Add</button>
+            </div>
+
+            <button class="modal__add-close" onclick="closeAddModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- MODAL EDIT -->
+    <div id="modal-edit">
+        <div class="modal-edit__background"></div>
+        <div class="modal-edit__container">
+            <header class="modal-edit-header">
+                <span>Chỉnh sửa sản phẩm</span>
+            </header>
+            <div class="modal-edit__body">
+                <div class="modal-edit__input">
+                    <label for="">Tên sản phẩm:</label>
+                    <input id="nameEdit" type="text">
+                </div>
+
+                <div class="modal-edit__input">
+                    <label for="">Ảnh minh hoạ(url):</label>
+                    <input id="imgEdit" type="text">
+                </div>
+
+                <div class="modal-edit__input">
+                    <label for="">Giá tiền(VNĐ):</label>
+                    <input id="priceEdit" type="number">
+                </div> 
+            </div>
+            <div class="modal__edit-btn" onclick="">
+                <button class="edit-btn" onclick="editModal()">Edit</button>
+            </div>
+
+            <button class="modal__edit-close" onclick="closeEditModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
 </body>
 
 <script src="./assets/js/product.js"></script>
-<script src="./assets/js/display.js"></script>
 <script src="./assets/js/login.js"></script>
+<script src="./assets/js/cart.js"></script>
+<script src="./assets/js/edit.js"></script>
+<script src="./assets/js/add.js"></script>
+<script src="./assets/js/delete.js"></script>
+<script src="./assets/js/search.js"></script>
+<script src="./assets/js/display.js"></script>
 </html>
