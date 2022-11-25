@@ -5,7 +5,7 @@ function displayProduct(productArr) {
     if(userValue == "Admin") {
         for(let i = 0; i < productArr.length; i++) {
             result += `<li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="#" class="container__menu-list-link">
+                            <div class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
                                     <img src="${productArr[i].getImg()}" alt="">
                                     <button class="container__menu-list-link-btn" onclick="buyProduct(${i}, '${productArr[i].getCategory()}')">
@@ -21,14 +21,14 @@ function displayProduct(productArr) {
                                     <button class="product-btn" onclick="editProduct(${i}, '${productArr[i].getCategory()}')">Sửa</button>
                                     <button type="button" class="product-btn" onclick="deleteProduct(${i}, '${productArr[i].getCategory()}')">Xoá</button>
                                 </div>
-                            </a>
+                            </div>
                         </li>`
             document.getElementById('addBtn').style.display = "flex";                                      
         } 
     } else {
         for(let i = 0; i < productArr.length; i++) {
             result += `<li class="col l-3 m-4 c-6 container__menu-list-item">
-                            <a href="#" class="container__menu-list-link">
+                            <div class="container__menu-list-link">
                                 <div class="container__menu-list-link-img-btn">
                                     <img src="${productArr[i].getImg()}" alt="">
                                 </div>
@@ -37,7 +37,7 @@ function displayProduct(productArr) {
                                     Giá:
                                     <span>${productArr[i].getPrice()}đ</span>
                                 </p>
-                            </a>
+                            </div>
                         </li>`
             document.getElementById('addBtn').style.display = "none";            
         }
