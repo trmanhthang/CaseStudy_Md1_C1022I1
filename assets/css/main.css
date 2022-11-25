@@ -965,6 +965,7 @@ span.content__product-link-desc {
 }
 
 /* MODAL */
+.modal__notify-background,
 .modal-edit__background,
 .modal-add__background,
 .modal__background,
@@ -986,6 +987,7 @@ span.content__product-link-desc {
     z-index: 2;
 }
 
+.modal__notify-background,
 .modal-edit__background,
 .modal-add__background,
 .modal__background {
@@ -1101,4 +1103,8 @@ span.content__product-link-desc {
 .modal__add-close:hover,
 .modal__login-close:hover {
     color: red;
+}
+
+#modal-notify {
+    display: none;
 }

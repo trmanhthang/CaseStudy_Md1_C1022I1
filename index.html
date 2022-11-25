@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font-icon/css/all.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>TH House</title>
@@ -48,7 +49,7 @@
                                     </ul>
                                 </li>
     
-                                <li id="cart" class="header__notify-right-items header__notify-cart" onmousemove="showCart()">
+                                <li id="cart" class="header__notify-right-items header__notify-cart">
                                     <div id="cart-price" class="header__notify-cart-price">
                                     </div>
                                     <i class="fa-solid fa-bag-shopping"></i>
@@ -576,6 +577,16 @@
             <button class="modal__edit-close" onclick="closeEditModal()">
                 <i class="fa-solid fa-xmark"></i>
             </button>
+        </div>
+    </div>
+
+    <!-- MODAL NOTIFY RESPONSIVE -->
+    <div id="modal-notify">
+        <div class="modal__notify-background"></div>
+        <div class="modal__notify-body">
+            <div class="modal__notify-header">Chào bạn!!!</div>
+            <div class="modal__notify-desc">Mình mới phát triển trang TH trên nền tảng trên PC, chưa có phát triển trên Mobile và Tablet (mình sẽ phát triển trên nền tảng khác trong thời gian tới). Trong thời gian này, bạn hãy truy cập trang TH bằng PC</div>
+            <div class="modal__notify-end">XIN CẢM ƠN!</div>
         </div>
     </div>
 </body>
