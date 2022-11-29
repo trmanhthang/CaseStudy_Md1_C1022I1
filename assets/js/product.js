@@ -12,7 +12,7 @@ class Product {
     getPrice() {return this.price;};
 
     setName(value) {this.name = value;};
-    setCategory(value) {this.category = category;};
+    setCategory(value) {this.category = value;};
     setImg(value) {this.img = value;};
     setPrice(value) {this.price = value;};
 }
